@@ -1,0 +1,643 @@
+* {
+    box-sizing:border-box;
+}
+
+html {
+    font-size: calc(1em + 1vw);
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    min-height: 100vh;
+    background-color: #efefef;
+}
+
+#grid-forside {
+    display:grid;
+    grid-template-areas: 
+        "top" 
+        "content" 
+        "bottom";
+
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+
+header {
+    grid-area:top;
+    border-bottom: 1.5px solid #000000;
+    padding:15px;
+    width:100%;
+    position:fixed;
+    background-color:#efefef;
+    z-index:1; /*Med z-index kan man bestemme hvilke elementer som skal være synlige
+                hvis de overlapper hverandre. z-index: 1 vil si at header har prioritet
+                over elementer med en lavere (0) eller ingen z-index verdi.
+                Et element med en høyere verdi ville overlappet headeren. */
+}
+
+.nav-section-desktop{
+    display:none;
+}
+
+
+.menu section{
+    display: flex;
+    justify-content: space-between; /*Sprer elementene jevnt ut i header. De første elementene i HTML starter mot venstre*/
+    align-items:baseline; /*Setter alle elementene langs samme linje*/
+}
+
+.menu section nav{
+    display:flex;
+    gap:1em; /*Separerer knappene i header, em = equal to the current font size
+    https://kb.blackbaud.com/knowledgebase/Article/24159*/
+    
+}
+
+.menu section nav input{
+    display:none;
+}
+
+.menu-desktop section{
+    display:flex;
+    justify-content: space-between;
+    align-items:baseline;
+
+}
+
+.menu-desktop section nav{
+    display:flex;
+    gap:1em;
+
+}
+
+.menu-desktop section img{
+    width:160px;
+
+}
+
+.menu-desktop{
+    display:none; /*header design for desktop vises ikke*/
+}
+
+
+
+.logo {
+    text-decoration:none;
+    color: #DDF15C;
+    -webkit-text-stroke-color:#000000;
+    -webkit-text-stroke-width:1.3px;
+    font-size:30px;
+    font-style:normal;
+    font-weight:400;
+}
+
+
+main {
+    grid-area:content;
+    padding:20px;
+    flex:1;
+    margin-top:50px;
+}
+
+.nav-article nav{
+    display:flex;
+    justify-content:space-between;
+    position:absolute; 
+    top: 175px;
+    left:50%;
+    transform:translateX(-50%); /*foreslått av chatGPT 3.5 for å sentrere elementer. X i translateX vil si X-aksen, som verdien i parentesen flytter elementet langs.*/
+    
+}
+
+.default-flex{
+    display:flex;
+    flex-direction:column;
+}
+
+.default-flex article {
+    text-align:center;
+    position:relative; /*Posisjonere elementer fra dens opprinnelige posisjon*/
+    margin-bottom:15px;
+}
+
+.default-flex article img {
+    max-width: 100%;
+}
+
+.default-flex article h2 {
+    position:absolute;
+    top:10px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:26px;
+    color:#efefef;
+}
+
+#main-article p{
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:26px;
+
+}
+
+.default-flex article h3 {
+    position:absolute;
+    top:-10px;
+    left:50%;
+    transform:translateX(-50%); 
+    font-size:26px;
+}
+
+footer {
+    grid-area:bottom;
+    background-color:#333;
+    color:#fff;
+    text-align:center;
+    padding:10px;
+}
+
+
+.footer-content {
+    display:inline-block;
+    list-style-type:none;
+    padding:0;
+}
+
+/*Produktside start*/
+#grid-produkt{
+    display:grid;
+    grid-template-areas:
+        "top"
+        "content"
+        "aside"
+        "bottom";
+
+    margin:0;
+    padding:0;
+    overflow:hidden;
+
+}
+
+#aside{
+    grid-area:aside;
+    padding:20px;
+}
+
+.produkt-flex{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    grid-area:content;
+
+}
+
+
+#breadcrumbs{
+    list-style:none;
+    display:inline-flex;
+    gap:10px;
+    font-size:16px;
+    padding:0;
+
+}
+
+
+.produkt{
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+#preview{
+    display: flex;
+    justify-content: center;
+    padding-top:10px;
+    gap:15px;
+} 
+
+.produkt nav{
+    text-align:center;
+}
+
+.produkt span{
+    text-align:left;
+}
+
+#size-btn{
+    display:flex;
+    justify-content:space-around;
+    gap:30px;
+    list-style:none;
+    padding:0;
+}
+
+#size-btn li{
+    background-color:#CECECE;
+    padding:5px;
+}
+
+#size-btn button{
+    background-color:#D9D9D9;
+    border:none;
+    font-size:30px;
+
+}
+
+.produkt a{
+    text-decoration:none;
+}
+
+.produkt a button{
+    display:flex;
+    justify-content:left;
+    margin:15px;
+    padding-top:7px;
+    margin-left:0;
+
+
+}
+
+#produktbeskrivelse{
+    text-align:left;
+    background-color:#D9D9D9;
+}
+
+#produktbeskrivelse h4{
+    padding-top:10px;
+    padding-left:5px;
+}
+
+#produktbeskrivelse p{
+    padding-left:5px;
+    padding-bottom:10px;
+}
+
+#handlekurv-btn{
+    background-color:#80C866;
+    border:none;
+    height:40px;
+}
+
+
+#størrelsesguide-btn{
+    background-color:#D9D9D9;
+    border:none;
+    height:40px;
+    padding-left:28px;
+    padding-right:28px;
+    margin-top:20px;
+
+}
+
+#størrelsesguide-btn-desktop{
+    display:none;
+}
+
+#brukeranmeldelser-btn{
+    display:none;
+}
+
+#suggestions{
+    display:none;
+}
+
+#suggestions-txt{
+    display:none;
+}
+
+/*Produktside end*/
+
+
+/*Handlekurv start*/
+#grid-handlekurv{
+    display:grid;
+    grid-template-areas:
+        "top"
+        "content"
+        "bottom";
+
+    margin:0;
+    padding:0;
+    overflow:hidden;
+
+
+}
+
+.handlekurv-flex{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:left;
+    grid-area:content;
+}
+
+.handlekurv-flex section i{
+    display:flex;
+    position:relative;
+    left:330px;
+
+}
+
+.handlekurv-flex section a{
+    color:black;
+    
+}
+
+#order-btns{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    width:330px;
+}
+
+#completeorder{
+    background-color:#80C866;
+    border:none;
+    height:60px;
+}
+
+#continueshopping{
+    background-color:#D9D9D9;
+    border:none;
+    height:50px;
+}
+
+
+/*Handlekurv end*/
+
+/*Media query for desktop, minimum bredde 960px*/
+@media (min-width:960px) {
+    #grid-forside{
+        grid-template-areas: "top top top" "content content content" "bottom bottom bottom";
+    }
+
+    body{
+        display:flex;
+    }
+
+    .logo{
+        font-size:48px;
+    }
+    .menu{
+        display:none; /*header design for mobil vises ikke*/
+    }
+    .menu-desktop{
+        display:block;
+        padding:10px;
+        border-bottom: 1.5px solid; /*header design for desktop vises*/
+
+    }
+
+    .menu-desktop input{
+        position:relative;
+        top:-6px;
+
+    }
+
+    main{
+        margin-top:100px;
+    }
+
+    header{
+        padding:0;
+    }
+
+    .nav-article{
+        display:none;
+    }
+
+    .nav-section-desktop{
+        display:flex;
+        list-style-type:none;
+        align-content:start;
+        margin:0;
+        padding:0;
+        gap:30px;
+        font-size:20px;
+        margin-left:5px;
+    }
+
+    .nav-section-desktop{
+        padding:5px;
+    }
+
+
+
+    .default-flex{
+        grid-area:content;
+        justify-content:center;
+        display:flex;
+    }
+
+    .footer-content{
+        display:flex;
+        justify-content:space-around;
+    }
+
+    .subarticles{
+        display:flex;
+        justify-content:center;
+        gap:50px;
+        flex-direction:row;
+    }
+
+    #main-article img{
+        width:600px;
+
+    }
+
+    #sub-article1 img{  /*Even Skaug hjalp meg med hvordan jeg lett kunne
+                          justere bildene slik at main-article blir stor og dukker opp øverst
+                          mens bildene under blir små og ligger under. 600px/2=300px, så da
+                          er de små bildene 275px for å gi 50px mellom dem.*/
+        width:275px
+    }
+
+    #sub-article2 img{
+        width:275px
+    }
+
+    /*Produktside start*/
+
+    #grid-produkt{
+        grid-template-areas: 
+            "top top top" 
+            "content content content" 
+            "aside aside aside" 
+            "bottom bottom bottom";
+            grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #produktbeskrivelse{
+        background-color:#efefef;
+    }
+
+    #produktbeskrivelse p{
+        font-size:25px;
+    }
+
+    .produkt-flex{
+        display:flex;
+        flex-direction:column;
+        flex-wrap:wrap;
+    
+    }
+
+    .produkt{
+        display:grid;
+    }
+
+    .produkt span{
+        padding-right:100px;
+    }
+
+    #produkt-txt{
+        margin-left:50px;
+        text-align:left;
+    }
+
+    .produkt nav img{
+        width:450px;
+        height:500px;
+    }
+
+
+    #size-btn{
+        display:-ms-inline-grid;
+        grid-area:content;
+        grid-column:2;
+        position:relative;
+        top:-120px;
+        left:50px
+
+    }
+
+    #expand-btn{
+        display:grid;
+        grid-area:content;
+        grid-column:3;
+        gap:20px;
+
+    }
+
+
+    #handlekurv-btn{
+        height:60px;
+        cursor:pointer; /*endrer på musepekeren når den er over elementet.
+                        Jeg måtte gjøre det slik */
+
+    }
+
+
+    #størrelsesguide-btn{
+        display:none;
+    }
+
+    #størrelsesguide-btn-desktop{
+        display:grid;
+        border-radius:20px;
+
+    }
+
+    #brukeranmeldelser-btn{
+        border-radius:20px;
+        display:grid;
+
+    }
+
+    #suggestions{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-around;
+
+    }
+
+    #suggestions-txt{
+        display:flex;
+    }
+
+
+
+    /*Produktside end*/
+
+    /*Handlekurv start*/
+    #grid-handlekurv{
+        grid-template-areas: 
+        "top top top" 
+        "content content content" 
+        "bottom bottom bottom";
+        grid-template-columns: 1fr 1fr 1fr;
+        flex-direction:row;
+    }
+
+    .handlekurv-flex{
+        display:grid;
+
+    }
+
+    .handlekurv-flex section{
+        display:flex;
+        justify-content:space-between;
+        margin:20px;
+    }
+
+
+    .handlekurv-flex section img{
+        height:200px;
+    }
+
+
+    .handlekurv-flex section h2{
+        margin-left:20px;
+
+    }
+
+
+    #product-info1{
+        display:block;
+        font-size:17px;
+
+
+    }
+
+    #product-info2{
+        display:block;
+        font-size:17px;
+    }
+
+
+
+    #totprice{
+        display:block;
+        background-color:#CECECE;
+        font-size:24px;
+        padding:10px
+    }
+
+    #completeorder{
+        height:90px;
+    }
+
+    #continueshopping-top{
+        margin:0;
+        padding-top:50px;
+        font-size:24px;
+
+    }
+
+    #continueshopping{
+        height:80px;
+    }
+
+    /*Handlekurv end*/
+
+}
+
