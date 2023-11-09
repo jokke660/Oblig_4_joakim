@@ -375,6 +375,10 @@ footer {
 
 /*Analyse start*/
 
+#analysecontent section img{
+    max-width:100%;
+
+}
     
 
 /*Analyse end*/
