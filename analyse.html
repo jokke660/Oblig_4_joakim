@@ -148,6 +148,10 @@
             </section>
             <hr>
             Tabell
+            <p>Hvilke analyseringsverktøy reagerer på hva?</p>
+            <p>Verktøyene reagerer ulikt på noe av koden de finner</p>
+            <p>Rød = Nevner feil/error</p>
+            <p>Grønn = Nevner ingen feil</p>
             <section>
                 <table bgcolor="black">
                     <tr bgcolor="white">
@@ -157,7 +161,42 @@
                         <th>Webaim</th>
                     </tr>
                     <tr bgcolor="white">
-                        <td>Kontrast</td>
+                        <td>Kontrastfeil</td>
+                        <td bgcolor="red">Ja</td>
+                        <td bgcolor="green">Ja</td>
+                        <td bgcolor="red">Ja</td>
+                        
+                    </tr>
+                    <tr bgcolor="white">
+                        <td>LANG-attributt</td>
+                        <td bgcolor="green">Ja</td>
+                        <td bgcolor="green">Ja</td>
+                        <td bgcolor="green">Ja</td>
+                    </tr>
+                    <tr bgcolor="white">
+                        <td>Bilder har Alt-attributt</td>
+                        <td bgcolor="green">Ja</td>
+                        <td bgcolor="green">Ja</td>
+                        <td bgcolor="green">Ja</td>
+                    </tr>
+                    <tr bgcolor="white">
+                        <td>Responsivt design</td>
+                        <td bgcolor="green">Ja</td>
+                        <td>Ja</td>
+                        <td>Nei</td>
+                    </tr>
+                    <tr bgcolor="white">
+                        <td>Mangler meta-beskrivelse</td>
+                        <td>Nei</td>
+                        <td bgcolor="red">Ja</td>
+                        <td>Nei</td>
+                    </tr>
+                    <tr bgcolor="white">
+                        <td>Mangler linknavn/tekst</td>
+                        <td>Nei</td>
+                        <td bgcolor="red">Ja</td>
+                        <td>Nei</td>
+
                     </tr>
                 </table>
 
