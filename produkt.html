@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="nb">
     <head>
+        <!--Metadata-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="Herresko, Pensko, Dressko">
         <meta name="description" content="Am facilisis ante quis maximus pulvinar. Morbi vulputate arcu non odio pretium sollicitudin. Proin tristique nunc quis justo efficitur, nec iaculis est gravida. Etiam ultricies risus sit amet leo convallis, quis maximus tellus scelerisque.">
+        <!--Metadata slutt-->
+        <!--FB metadata-->
+        <meta property="fb:app_id" content="">
+        <meta property="og:title" content="Fine pensko til menn">
+        <meta property="og:url" content="https://schema.org/AggregateRating">
+        <meta property="og:description" content="Am facilisis ante quis maximus pulvinar.
+        Morbi vulputate arcu non odio pretium sollicitudin.
+        Proin tristique nunc quis justo efficitur, nec iaculis est gravida.">
+        <meta property="og:image:url" content="https://cdn.pixabay.com/photo/2016/03/31/19/42/clothes-1295223_1280.png">
+        <meta property="og:image:alt" content="Eksklusive pensko til menn.">
+        <meta property="og:type" content="website">
+        <!--FB metadata slutt-->
+        <!--Twitter metadata-->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@Jokke_s_s">
+        <meta name="twitter:title" content="Fine pensko til menn.">
+        <meta name="twitter:description" content="Am facilisis ante quis maximus pulvinar. Morbi vulputate arcu non odio pretium sollicitudin. Proin tristique nunc quis justo efficitur, nec iaculis est gravida. Etiam ultricies risus sit amet leo convallis, quis maximus tellus scelerisque.">
+        <meta name="twitter:image" content="https://cdn.pixabay.com/photo/2016/03/31/19/42/clothes-1295223_1280.png">
+        <!--Twitter metadata slutt-->
         <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
         <link href="css/font/css/fontawesome.css" rel="stylesheet">
         <link href="css/font/css/brands.css" rel="stylesheet">
@@ -20,11 +40,12 @@
             <!--header mobil-->
             <div class="menu">
                 <section>
+                    <a href="#produktmain" class="skip">Hopp til hovedinnhold</a>
                     <nav>
                         <i class="fa-solid fa-bars"></i>
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </nav>
-                    <a href="index.html" aria-label="Gå til forside" class="logo">SKOBUTIKK</a>
+                    <a href="index.html" aria-label="SKOBUTIKK" class="logo">SKOBUTIKK</a>
                     <nav>
                         <i class="fa-regular fa-user"></i>
                         <a href="handlekurv.html" aria-label="Gå til handlekurv"><i class="fa-solid fa-cart-shopping"></i><p class="handlekurvdesc">Handlekurv</p></a>
@@ -34,7 +55,7 @@
             <!--header desktop-->
             <div class="menu-desktop">
                 <section>
-                    <a href="index.html" aria-label="Gå til forside" class="logo">SKOBUTIKK</a>
+                    <a href="index.html" aria-label="SKOBUTIKK" class="logo">SKOBUTIKK</a>
                     <input type="text" id="søk" placeholder="Søk">
                     <label for="søk" class="søklabel">Søk</label>
                     <img src="img/logginn.jpg" alt="logginn">
@@ -54,17 +75,23 @@
             
         </header>
  
-        <main>
+        <main itemscope itemtype="https://schema.org/Product" id="produktmain">
             <section class="produkt-flex">
-                <ul id="breadcrumbs">
-                    <li><a href="index.html" aria-label="Hjem, gå til forside">Hjem /</a></li> 
+                <ul itemscope itemtype="https://schema.org/BreadcrumbList" id="breadcrumbs">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="index.html" aria-label="Hjem"> 
+                            <span itemprop="name">Hjem /</span>
+                        </a>
+                        <meta itemprop="position" content="1"> <!--Manglende felt "position" dukket opp
+                        Funnet løsning på Github WEBUTVIKLING2023/MIRCO/product.html-->
+                    </li>
                     <li>Herresko /</li> 
                     <li>Pensko /</li>
                     <li>[Merke] </li>
                 </ul>
                 <article class="produkt">
                     <nav>
-                    <img src="img/placeholder.jpg" alt="placeholer">
+                    <img src="img/placeholder.jpg" alt="placeholer" itemprop="image">
                         <section id="preview">
                             <i class="fa-solid fa-circle"></i>
                             <i class="fa-regular fa-circle"></i>
@@ -73,19 +100,22 @@
                     </nav>
                     <div id="produkt-txt">
                         <h2>NAVN PRODUSENT</h2>
-                        <h3>SKO NAVN / MERKE</h3>
-                        <h4>799,-</h4>
+                        <h3 itemprop="name">SKO NAVN / MERKE</h3>
+                        <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <meta itemprop="priceCurrency" content="NOK">
+                            <h4 itemprop="price" content="799.00">799,-</h4>
+                        </div>
                         <p>Velg størrelse:</p>
                     </div>
                     <ul id="size-btn">
-                        <li>41</li>
-                        <li>42</li>
-                        <li>43</li>
-                        <li>44</li>
-                        <li>45</li>
+                        <li value="41" itemprop="size">41</li>
+                        <li value="42" itemprop="size">42</li>
+                        <li value="43" itemprop="size">43</li>
+                        <li value="44" itemprop="size">44</li>
+                        <li value="45" itemprop="size">45</li>
                     </ul>
                     <span>
-                        <button onclick="window.location.href='handlekurv.html';" aria-label="Gå til handlekurv" tabindex="0" id="handlekurv-btn"><i class="fa-solid fa-cart-shopping"></i>   Legg i handlekurv</button>
+                        <button onclick="window.location.href='handlekurv.html';" aria-label="   Legg i handlekurv" tabindex="0" id="handlekurv-btn"><i class="fa-solid fa-cart-shopping"></i>   Legg i handlekurv</button>
                         <button id="størrelsesguide-btn">Størrelsesguide</button>
                     </span>
                     <!--Desktop elements-->
@@ -101,7 +131,7 @@
         <aside id="aside">
             <section id="produktbeskrivelse">
                 <h4>Produktbeskrivelse</h4>
-                <p>Am facilisis ante quis maximus pulvinar.
+                <p itemprop="description">Am facilisis ante quis maximus pulvinar.
                    Morbi vulputate arcu non odio pretium sollicitudin.
                    Proin tristique nunc quis justo efficitur, nec iaculis est gravida.
                    Etiam ultricies risus sit amet leo convallis, quis maximus tellus scelerisque.

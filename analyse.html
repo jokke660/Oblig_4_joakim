@@ -18,11 +18,12 @@
             <!--header mobil-->
             <div class="menu">
                 <section>
+                    <a href="#analysecontent" class="skip">Hopp til hovedinnhold</a>
                     <nav>
                         <i class="fa-solid fa-bars"></i>
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </nav>
-                    <a href="index.html" class="logo">SKOBUTIKK</a>
+                    <a href="index.html" aria-label="SKOBUTIKK" class="logo">SKOBUTIKK</a>
                     <nav>
                         <i class="fa-regular fa-user"></i>
                         <a href="handlekurv.html"><i class="fa-solid fa-cart-shopping"></i><p class="handlekurvdesc">Handlekurv</p></a>
@@ -32,7 +33,7 @@
             <!--header desktop-->
             <div class="menu-desktop">
                 <section>
-                    <a href="index.html" aria-label="Gå til forside" class="logo">SKOBUTIKK</a>
+                    <a href="index.html" aria-label="SKOBUTIKK" class="logo">SKOBUTIKK</a>
                     <input type="text" id="søk" placeholder="Søk">
                     <label for="søk" class="søklabel">Søk</label>
                     <img src="img/logginn.jpg" alt="logginn">
@@ -199,62 +200,62 @@
             <p>Rød = Nevner feil/error</p>
             <p>Grønn = Nevner ingen feil</p>
             <section>
-                <table bgcolor="black">
-                    <tr bgcolor="white">
+                <table id="black">
+                    <tr id="white">
                         <th>Resultat</th>
                         <th>ChatGPT</th>
                         <th>Lighthouse</th>
                         <th>Webaim</th>
                     </tr>
-                    <tr bgcolor="white">
+                    <tr id="white">
                         <td>Kontrastfeil</td>
-                        <td bgcolor="red">Ja</td>
-                        <td bgcolor="green">Ja</td>
-                        <td bgcolor="red">Ja</td>
+                        <td id="red">Ja</td>
+                        <td id="green">Ja</td>
+                        <td id="red">Ja</td>
                         
                     </tr>
-                    <tr bgcolor="white">
+                    <tr id="white">
                         <td>LANG-attributt</td>
-                        <td bgcolor="green">Ja</td>
-                        <td bgcolor="green">Ja</td>
-                        <td bgcolor="green">Ja</td>
+                        <td id="green">Ja</td>
+                        <td id="green">Ja</td>
+                        <td id="green">Ja</td>
                     </tr>
-                    <tr bgcolor="white">
+                    <tr id="white">
                         <td>Bilder har Alt-attributt</td>
-                        <td bgcolor="green">Ja</td>
-                        <td bgcolor="green">Ja</td>
-                        <td bgcolor="green">Ja</td>
+                        <td id="green">Ja</td>
+                        <td id="green">Ja</td>
+                        <td id="green">Ja</td>
                     </tr>
-                    <tr bgcolor="white">
+                    <tr id="white">
                         <td>Responsivt design</td>
-                        <td bgcolor="green">Ja</td>
+                        <td id="green">Ja</td>
                         <td>Ja</td>
                         <td>Nei</td>
                     </tr>
-                    <tr bgcolor="white">
+                    <tr id="white">
                         <td>Mangler meta-beskrivelse</td>
                         <td>Nei</td>
-                        <td bgcolor="red">Ja</td>
+                        <td id="red">Ja</td>
                         <td>Nei</td>
                     </tr>
-                    <tr bgcolor="white">
+                    <tr id="white">
                         <td>Mangler linknavn/tekst</td>
                         <td>Nei</td>
-                        <td bgcolor="red">Ja</td>
+                        <td id="red">Ja</td>
                         <td>Nei</td>
 
                     </tr>
-                    <tr bgcolor="white">
+                    <tr id="white">
                         <td>Nøkkelord</td>
                         <td>Ja</td>
                         <td>Nei</td>
                         <td>Nei</td>
                     </tr>
-                    <tr bgcolor="white">
+                    <tr id="white">
                         <td>Søk mangler label</td>
                         <td>Nei</td>
                         <td>Nei</td>
-                        <td bgcolor="red">Ja</td>
+                        <td id="red">Ja</td>
                     </tr>
                     
                 </table>
@@ -314,23 +315,127 @@
             <hr>
             <section>
                 <h3>Før og etter forbedringer</h3>
+                <img src="img/analysebilder/index_improvements.png" alt="indeximprovements">
+                <p>Etter disse forbedringene ble implementert økte accessibility og SEO på forsiden:</p>
+                <ul>
+                    <li>+9 accessibility mobile</li>
+                    <li>+8 SEO mobile</li>
+                </ul>
+                <ul>
+                    <li>+2 accessibility desktop</li>
+                    <li>+10 SEO desktop</li>
+                </ul>
+                <h4>SEO</h4>
+                <p>Produktside:</p>
+                <img src="img/analysebilder/seo_produkt_improved.png" alt="seoproduktimproved">
+                <p>Produktside desktop:</p>
+                <img src="img/analysebilder/seo_produkt_improved_desktop.png" alt="seoproduktimproveddesktop">
+                <ul>
+                    <li>+8 SEO mobile</li>
+                    <li>10+SEO desktop</li>
+                </ul>
+                <p>Handlekurv:</p>
+                <img src="img/analysebilder/seo_handlekurv_improved.png" alt="seohandlekurvimproved">
+                <p>Handlekurv desktop:</p>
+                <img src="img/analysebilder/seo_handlekurv_improved_desktop.png" alt="seohandlekurvimproveddesktop">
+                <ul>
+                    <li>+8 SEO mobile</li>
+                    <li>+10 SEO desktop</li>
+                </ul>
+                
+                <h4>UU</h4>
+                <p>Produktside:</p>
+                <img src="img/analysebilder/accessibility_produkt_improved.png" alt="accessibilityproduktimproved">
+                <p>Produktside desktop:</p>
+                <img src="img/analysebilder/accessibility_produkt_improved_desktop.png" alt="accessibilityproduktimproveddesktop">
+                <ul>
+                    <li>+8 UU mobile</li>
+                    <li>+2 UU desktop</li>
+                </ul>
+                <p>Handlekurv:</p>
+                <img src="img/analysebilder/accessibility_handlekurv_improved.png" alt="accessibilityhandlekurvimproved">
+                <p>Handlekurv desktop:</p>
+                <img src="img/analysebilder/accessibility_handlekurv_improved_desktop.png" alt="accessibilityhandlekurvimproveddesktop">
+                <ul>
+                    <li>+8 UU mobile</li>
+                    <li>+2 UU desktop</li>
+                </ul>
+                <p>Endringene har ført til en økt SEO og UU-score på alle tre sidene.</p>
+                <p>SEO ble økt fordi alle sidene nå har en meta-beskrivelse.</p>
+                <p>UU ble økt på grunn av aria-labels, som gjør at alle elementer som linker noe sted har en tekstlig beskrivelse
+                    til bruk med skjermlesere.
+                </p>
+                <p>Det finnes fortsatt et error i UU, jeg vet ikke hvor frame-taggene kommer fra.
+                    De finnes ikke i koden min, det finnes ingenting med navn "frame" på noen av sidene mine. </p>
+                <h4>Webaim</h4>
+                <img src="img/analysebilder/webaim_index_improved.png" alt="webaimindeximproved">
+                <p>Fra 2 til 0 error. Kontrastfeilen er også fikset.</p>
+                <img src="img/analysebilder/webaim_produkt_improved.png" alt="webaimproduktimproved">
+                <p>Fra 2 til 0 error.</p>
+                <img src="img/analysebilder/webaim_handlekurv_improved.png" alt="webaimhandlekurvimproved">
+                <p>Fra 2 til 0 error.</p>
+                <p>Problemene som måtte fikses var å gi søkefeltet en label, skrive tekst innenfor linken i logoen og justere fargen på logoen.</p>
+
 
             </section>
             <hr>
             <section>
                 <h3>Del 3: Tilgjengelighet</h3>
+                <p>Jeg har testet nettstedet mitt med to forskjellige skjermlesere.
+                    Jeg har valgt å bruke Chrome sin screen reader extension, og den innebygde skjermleseren
+                    i Windows.
+                </p>
+                <p>Nettstedet mitt inneholder allerede ARIA-attributter fra forbedringsprosessen i forrige trinn.</p>
+                <p>Med begge skjermlesere er nettstedet navigerbar, men det fungerer ikke helt optimalt.</p>
+                <p>Chrome sitt skjermlesningsverktøy leser opp den underliggende HTML-strukturen for det uthevede elementet
+                    som standard. Som et eksempel har jeg bilder som linker videre til produktsiden min på forsiden. Når bildeelementet er valgt
+                    leser skjermleseren opp "section, article" før den leser opp ARIA-labels. Dette kunne skrus av i innstillingene.
+                </p>
+                <p>Ved bruk av TAB, enter og piltastene kan man navigere rundt på nettstedet uten å bruke datamus.
+                    Med TAB navigerer man ved å highlighte neste klikkbare element nedover i HTML-strukturen.
+                    Piltastene tillater scrolling. Dette vil såklart være mindre nyttig hvis brukeren er blind.
+                    Enter fungerer som venstreklikk. Chrome-skjermleseren har også en del konfigurerbare tastatur-snarveier.
+                </p>
+                <p>Windows-skjermleseren leser også opp elementer som highlightes ved bruk av tastatur-navigasjon.
+                    Skjermleseren leser ikke opp HTML-strukturen slik som den i Google Chrome, men den forteller hva
+                    slags element som er uthevet. Som et eksempel blir bildene på forsiden lest opp som "Kobling, Pensko, [MERKENAVN]".
+                    Knappen for å legge til produktet i handlekurven blir lest opp som "Legg i handlekurv, knapp".
+                </p>
+                <p>En utfordring med verktøyet til windows er at den leser opp alt som er synlig på maskinen, ikke bare nettleseren.
+                    Når man har nådd bunn på nettsiden og trykker inn TAB enda en gang begynner skjermleseren og lese opp alle elementene
+                    i hele nettleseren om igjen.
+                </p>
+                <p>Verktøyene fungerer likt på mitt nettsted som hos andre kjente nettbutikker for sko, som f.eks.
+                    <a href="https://www.eurosko.com/no/">Eurosko</a> og <a href="https://www.dinsko.no/">Dinsko</a>.
+                    Disse benytter nok også ARIA-attributter.
+                </p>
+                <h4>Skip til hovedinnhold:</h4>
+                <p>Her har jeg lagt til en skip til main content. Main har da f.eks. id="indexmain" på forsiden.</p>
+                <img src="img/analysebilder/indexmain_skiplink.png" alt="indexmainskiplink">
+                <p>I CSS har jeg flyttet selve teksten ut av syne:</p>
+                <img src="img/analysebilder/skiplink_css.png" alt="skiplinkcss">
 
             </section>
             <hr>
             <section>
                 <h3>Del 4: Microdata og Rich results</h3>
+                <p>Jeg har lagt til microdata til min produktside for de elementene som allerede eksisterte på siden.</p>
+                <img src="img/analysebilder/microdata1.png" alt="microdata1">
+                <img src="img/analysebilder/microdata2.png" alt="microdata2">
+                <img src="img/analysebilder/microdata3.png" alt="microdata3">
+                <img src="img/analysebilder/microdata4.png" alt="microdata4">
+                <p>Det finnes nå microdata for produktet i img, produktnavn, pris/valuta og tilgjengelige størrelser.</p>
+                <p>Jeg har også lagt inn BreadcrumbList og fått hjem-koblingen, som er det eneste interaktive elementet, til å dukke opp i rich results.</p>
             </section>
             <hr>
             <section>
                 <h3>Del 5: Meta og SOME</h3>
+                <p>Jeg har lagt til metadata til Facebook og Twitter for alle tre sidene mine.</p>
+                <img src="img/analysebilder/fbsummarycard_index.png" alt="fbsummarycardindex">
+                <img src="img/analysebilder/fbsummarycard.png" alt="fbsummarycard">
+                <img src="img/analysebilder/tweet_composer.png" alt="tweetcomposer">
+                <img src="img/analysebilder/twittersummarycard.png" alt="produktsummarycard">
             </section>
-
-        
 
         </main>
         <footer>

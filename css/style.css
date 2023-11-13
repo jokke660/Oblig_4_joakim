@@ -41,6 +41,22 @@ header {
                 Et element med en høyere verdi ville overlappet headeren. */
 }
 
+.skip { 
+    position: absolute;
+    left: -6000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+/*skip-linken må gjøres usynlig i CSS. Det er en accessibility-funksjon som skal brukes med tastatur-navigering. */
+.skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+/*W3schools har en side om accessibility skip links: https://www.w3schools.com/accessibility/accessibility_skip_links.php*/
+
 .nav-section-desktop{
     display:none;
 }
@@ -57,6 +73,22 @@ header {
     gap:1em; /*Separerer knappene i header, em = equal to the current font size
     https://kb.blackbaud.com/knowledgebase/Article/24159*/
     
+}
+
+#black{
+    background-color:black;
+}
+
+#white{
+    background-color:white;
+}
+
+#red{
+    background-color:red;
+}
+
+#green{
+    background-color:green;
 }
 
 .menu section nav input{
