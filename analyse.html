@@ -25,7 +25,7 @@
                     <a href="index.html" class="logo">SKOBUTIKK</a>
                     <nav>
                         <i class="fa-regular fa-user"></i>
-                        <a href="handlekurv.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="handlekurv.html"><i class="fa-solid fa-cart-shopping"></i><p class="handlekurvdesc">Handlekurv</p></a>
                     </nav>
                 </section>
             </div>
@@ -33,7 +33,8 @@
             <div class="menu-desktop">
                 <section>
                     <a href="index.html" class="logo">SKOBUTIKK</a>
-                    <input type="text" placeholder="Søk">
+                    <input type="text" id="søk" placeholder="Søk">
+                    <label for="søk">Søk</label>
                     <img src="img/logginn.jpg" alt="logginn">
                     <a href="handlekurv.html"><img src="img/handlekurv.jpg" alt="handlekurv"></a>
 
@@ -94,13 +95,22 @@
             <section id="results">
                 <h3>Lighthouse resultater for Index</h3>
                 <img src="img/analysebilder/results_index.png" alt="resultsindex">
-                <p>Performance</p>
+                <h3>Performance</h3>
                 <img src="img/analysebilder/performance_index.png" alt="performanceindex">
                 <img src="img/analysebilder/performance2_index.png">
                 <img src="img/analysebilder/performance3_index.png">
                 <h3>Best practices</h3>
                 <p>Bilder med lav oppløsning</p>
                 <img src="img/analysebilder/bestpractices_index.png">
+                <h3>Lighthouse resultater for Index desktop</h3>
+                <img src="img/analysebilder/results_index_desktop.png" alt="resultsindexdesktop">
+                <h3>Performance desktop</h3>
+                <img src="img/analysebilder/performance_index_desktop.png" alt="performanceindexdesktop">
+                <img src="img/analysebilder/performance2_index_desktop.png" alt="performance2indexdesktop">
+                <h3>Best practices desktop</h3>
+                <p>Bilder med lav oppløsning</p>
+                <img src="img/analysebilder/bestpractices_index_desktop.png" alt="bestpracticesindexdesktop">
+
 
 
             </section>
@@ -117,6 +127,13 @@
                     En meta description er en tekstlig forklaring på hva siden inneholder. Søkemotorer
                     kan hente denne teksten og vise den i søkeresultatene.
                 </p>
+            <h3>Resultater SEO desktop</h3>
+            <h3>Index</h3>
+            <img src="img/analysebilder/seo_index_desktop.png" alt="seoindexdesktop">
+            <h3>Produktside desktop</h3>
+            <img src="img/analysebilder/seo_produkt_desktop.png" alt="seoproduktdesktop">
+            <h3>Handlekurv desktop</h3>
+            <img src="img/analysebilder/seo_handlekurv_desktop.png" alt="seohandlekurvdesktop">
 
 
             </section>
@@ -129,6 +146,14 @@
                 <img src="img/analysebilder/accessibility_produkt.png">
                 <h3>Handlekurv</h3>
                 <img src="img/analysebilder/accessibility_handlekurv.png">
+                <h3>Resultater UU Desktop</h3>
+                <h3>Index</h3>
+                <img src="img/analysebilder/accessibility_index_desktop.png" alt="accessibilityindexdesktop">
+                <h3>Produktside Desktop</h3>
+                <img src="img/analysebilder/accessibility_produkt_desktop.png" alt="accessibilityproduktdesktop">
+                <h3>Handlekurv Desktop</h3>
+                <img src="img/analysebilder/accessibility_handlekurv_desktop.png" alt="accessibilityhandlekurvdesktop">
+
             </section>
             <hr>
             <section>
@@ -144,6 +169,27 @@
                 <h4>Handlekurv</h4>
                 <img src="img/analysebilder/chatgpt_seo_handlekurv.png">
                 <img src="img/analysebilder/chatgpt_UU_handlekurv.png">
+                
+            </section>
+            <hr>
+            <section>
+                <h3>Webaim</h3>
+                <p>Webaim viser nettsidens strukturelle elementer, funksjoner og eventuelle error.
+                    Webaim viser hvor alle disse elementene er lokalisert visuelt. Verktøyet lar deg
+                    også teste farger i sanntid for å sjekke om kontrasten blir godkjent i henhold til
+                    WCAG (Web Content Accessibility Guidelines).
+                </p>
+                <h4>Index</h4>
+                <img src="img/analysebilder/webaim1_index.png" alt="webaim1index">
+                <img src="img/analysebilder/webaim2_index.png" alt="webaim2index">
+                <p>Her ser man at jeg fikk feil på kontrasten til logoen etter WCAG.</p>
+                <img src="img/analysebilder/webaim3_index.png" alt="webaim3index">
+                <h4>Produktside</h4>
+                <img src="img/analysebilder/webaim1_produkt.png" alt="webaim1produkt">
+                <img src="img/analysebilder/webaim2_produkt.png" alt="webaim2produkt">
+                <h4>Handlekurv</h4>
+                <img src="img/analysebilder/webaim1_handlekurv.png" alt="webaim1handlekurv">
+                <img src="img/analysebilder/webaim2_handlekurv.png" alt="webaim2handlekurv">
                 
             </section>
             <hr>
@@ -198,8 +244,90 @@
                         <td>Nei</td>
 
                     </tr>
+                    <tr bgcolor="white">
+                        <td>Nøkkelord</td>
+                        <td>Ja</td>
+                        <td>Nei</td>
+                        <td>Nei</td>
+                    </tr>
+                    <tr bgcolor="white">
+                        <td>Søk mangler label</td>
+                        <td>Nei</td>
+                        <td>Nei</td>
+                        <td bgcolor="red">Ja</td>
+                    </tr>
+                    
                 </table>
+            </section>
+            <hr>
+            <section>
+                <h3>Forbedringer</h3>
+                <h4>Kontrast</h4>
+                <p>Her fikset jeg problemet med kontrasten ved å bruke webaim. Verktøyet lar meg justere
+                    fargene i sanntid for å se hva som blir godkjent og ikke. Så kopierte jeg fargekoden #AA5708
+                    og byttet den med den eksisterende fargen i CSS.
+                </p>
+                <img src="img/analysebilder/forbedring1_kontrast.png" alt="forbedring1kontrast">
+                <img src="img/analysebilder/forbedring2_kontrast.png" alt="forbedring2kontrast">
+                <p>Så ble fargene godkjent i webaim.</p>
+                
+                <h4>Mangler meta-beskrivelse</h4>
+                <img src="img/analysebilder/metadescription_missing.png" alt="metadescription missing">
+                <p>Meta-description er en kort beskrivelse av nettsiden som vises når nettsiden dukker opp i en søkemotor.
+                    Her har jeg lagt til meta name="description" på alle sidene:
+                </p>
+                <img src="img/analysebilder/metadescription_index.png" alt="metadescription index">
+                <img src="img/analysebilder/metadescription_produkt.png" alt="metadescription produkt">
+                <img src="img/analysebilder/metadescription_handlekurv.png" alt="metadescription handlekurv">
+                <p>Forsiden har naturligvis en beskrivelse av hele nettstedet, mens beskrivelsene av de andre sidene
+                    er mer spesifikke for deres innhold.
+                </p>
 
+                <h4>Linktekst mangler</h4>
+                <p>Lighthouse ønsker at jeg legger til aria-labels etter href.</p>
+                <img src="img/analysebilder/linksdonothaveadiscerniblename.png" alt="arialabelsmissing">
+                <p>Teksten skal si noe om hva linken gjør slik at brukere som benytter skjermleser
+                     skal vite hva som skjer når linker trykkes.</p>
+                <p>Jeg har lagt til aria-labels slik:</p>
+                <img src="img/analysebilder/arialabel_example.png" alt="arialabelexample">
+                <p>Der jeg har brukt "onclick" skal tabindex="0" legges til (https://dequeuniversity.com/rules/axe/4.8/link-name
+                     | Fra lighthouse)</p>
+                <img src="img/analysebilder/tabindexexample.png" alt="tabindexexample">
+                <img src="img/analysebilder/onclicktabindexexample.png" alt="onclickexample">
+                <h4>"Missing form label"</h4>
+                <img src="img/analysebilder/missingformlabel.png" alt="missingformlabel">
+                <p>Webaim ber om at søkefeltet har en tekst-label:</p>
+                <img src="img/analysebilder/labelsearch.png" alt="labelsearch">
+                <h4>Link inneholder ingen tekst, webaim. </h4>
+                <p>Webaim rapporterer et problem med linken knyttet til handlekurv-ikonet.
+                    Den inneholder ingen tekst.
+                </p>
+                <img src="img/analysebilder/linktext_problem.png" alt="linktextproblem">
+                <p>Det var vanskelig for meg å fortså hvorfor dette problemet dukker opp her.
+                    Jeg har lagt til en "p-tag" med beskrivelsen "handlekurv", og gjort selve teksten
+                    usynelig i headeren gjennom CSS.
+                </p>
+                <img src="img/analysebilder/linktext.png" alt="linktext">
+
+
+            </section>
+            <hr>
+            <section>
+                <h3>Før og etter forbedringer</h3>
+                
+            </section>
+            <hr>
+            <section>
+                <h3>Del 3: Tilgjengelighet</h3>
+
+            </section>
+            <hr>
+            <section>
+                <h3>Del 4: Microdata og Rich results</h3>
+            </section>
+            <hr>
+            <section>
+                <h3>Del 5: Meta og SOME</h3>
             </section>
 
         

@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="Sko, Sko herre, Sko dame, Sko barn, Fottøy, Skobutikk, Sko dame 2023, Sko herre 2023, Julegave sko, Sko tilbud, Sko salg">
+        <meta name="description" content="Hele Norges skobutikk! Her finner du alle slags sko til hyggelige priser.">
         <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
         <link href="css/font/css/fontawesome.css" rel="stylesheet">
         <link href="css/font/css/brands.css" rel="stylesheet">
@@ -23,20 +24,21 @@
                         <i class="fa-solid fa-bars"></i>
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </nav>
-                    <a href="index.html" class="logo">SKOBUTIKK</a>
+                    <a href="index.html" aria-label="Gå til forside" class="logo">SKOBUTIKK</a>
                     <nav>
                         <i class="fa-regular fa-user"></i>
-                        <a href="handlekurv.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="handlekurv.html" aria-label="Gå til handlekurv"><i class="fa-solid fa-cart-shopping"></i><p class="handlekurvdesc">Handlekurv</p></a>
                     </nav>
                 </section>
             </div>
             <!--header desktop-->
             <div class="menu-desktop">
                 <section>
-                    <a href="index.html" class="logo">SKOBUTIKK</a>
-                    <input type="text" placeholder="Søk">
+                    <a href="index.html" aria-label="Gå til forside" class="logo">SKOBUTIKK</a>
+                    <input type="text" id="søk" placeholder="Søk">
+                    <label for="søk">Søk</label>
                     <img src="img/logginn.jpg" alt="logginn">
-                    <a href="handlekurv.html"><img src="img/handlekurv.jpg" alt="handlekurv"></a>
+                    <a href="handlekurv.html" aria-label="Gå til handlekurv"><img src="img/handlekurv.jpg" alt="handlekurv"></a>
 
                 </section>
             </div>
@@ -65,17 +67,17 @@
                 </article>
                 
                     <article id="main-article">
-                        <a href="produkt.html"><img src="img/placeholder.jpg" alt="placeholder"></a>
+                        <a href="produkt.html" aria-label="Pensko[Merkenavn]"><img src="img/placeholder.jpg" alt="placeholder"></a>
                         <h3>[MERKENAVN]</h3>
                         <p>Handle nå!</p>
                     </article>
                 <section class="subarticles">
                     <article id="sub-article1">
-                        <a href="produkt.html"><img src="img/placeholder.jpg" alt="placeholder"></a>
+                        <a href="produkt.html" aria-label="Pensko[Merkenavn]"><img src="img/placeholder.jpg" alt="placeholder"></a>
                         <h3>[MERKENAVN]</h3>
                     </article>
                     <article id="sub-article2">
-                        <a href="produkt.html"><img src="img/placeholder.jpg" alt="placeholder"></a>
+                        <a href="produkt.html" aria-label="Pensko[Merkenavn]"><img src="img/placeholder.jpg" alt="placeholder"></a>
                         <h3>[MERKENAVN]</h3>
                 </article>
             </section>
@@ -89,7 +91,7 @@
                     <li>Kontakt oss</li>
                     <li>Kundeservice</li>
                     <li>Kjøpsvilkår</li>
-                    <li onclick="window.location.href='analyse.html';">Analyse</li>
+                    <li onclick="window.location.href='analyse.html';" aria-label="Gå til analyse" tabindex="0">Analyse</li>
                 </ul>
             </nav>
 

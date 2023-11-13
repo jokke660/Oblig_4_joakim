@@ -85,11 +85,19 @@ header {
     display:none; /*header design for desktop vises ikke*/
 }
 
+label{
+    display:none;
+}
+
+.handlekurvdesc{
+    display:none;
+}
+
 
 
 .logo {
     text-decoration:none;
-    color: #DDF15C;
+    color: #AA5708;
     -webkit-text-stroke-color:#000000;
     -webkit-text-stroke-width:1.3px;
     font-size:30px;
