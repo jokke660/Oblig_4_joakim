@@ -85,8 +85,8 @@ header {
     display:none; /*header design for desktop vises ikke*/
 }
 
-label{
-    display:none;
+.søklabel{
+    visibility:hidden;
 }
 
 .handlekurvdesc{
