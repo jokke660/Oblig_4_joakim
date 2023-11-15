@@ -75,19 +75,19 @@ header {
     
 }
 
-#black{
+.black{
     background-color:black;
 }
 
-#white{
+.white{
     background-color:white;
 }
 
-#red{
+.red{
     background-color:red;
 }
 
-#green{
+.green{
     background-color:green;
 }
 
